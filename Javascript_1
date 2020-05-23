@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Questions</title>
+    <link rel='stylesheet' href='website_questions.css'>
+    <script>
+        let color;
+        function change_color() {
+            color = document.querySelector('#hex').value;
+            document.querySelector('body').style.backgroundColor = color;
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <label for='hex'>Hex Color</label>
+        <input type='text' name='hex' id='hex'>
+        <button id='submit' onclick=change_color()>Submit</button>
+    </form>
+    <span id='result'>
+
+    </span>
+</body>
+</html>
