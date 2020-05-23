@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Questions</title>
+    <link rel='stylesheet' href='website_questions.css'>
+    <script>
+        let timer = 0;
+        function change_color() {
+            timer += 1;
+            document.querySelector('body').style.backgroundColor = 'red';
+            if (timer % 2 === 0) {
+                document.querySelector('body').style.backgroundColor = 'black';  // if timer is even then click turns page black
+            }
+        }
+    </script>
+</head>
+<body>
+    <button onclick='change_color()'>Click me</button>
+</body>
+</html>
