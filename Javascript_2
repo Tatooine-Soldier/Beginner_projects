@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Questions</title>
+    <link rel='stylesheet' href='website_questions.css'>
+</head>
+<body id='body'>
+    <button  onclick="higher()" id='higher'>Higher</button>
+    <button  onclick="lower()" id='lower'>Lower</button>
+    <section id='error'>
+
+    </section>
+    <script>
+        let counter = 0;
+        let error = document.getElementById('#error');
+        document.addEventListener('click', green, false);
+            function higher() {
+                counter += 1;
+                console.log(counter);
+                let error = document.getElementById('#error');
+                error.innerHTML = 0;
+            }
+            function lower() {
+                counter -= 1;
+                console.log(counter);
+                error.innerHTML = counter;
+                if (counter < 0) {
+                    error.innerHTML = 'No negatives allowed'
+                    console.log("No negatives");
+                }
+            }
+            function green() {
+                let color = document.querySelector("body");
+                color.style.backgroundColor = 'green';
+                if (counter % 2 === 0) {
+                    color.style.backgroundColor = 'red';
+                }
+            }
+    </script>
