@@ -1,0 +1,56 @@
+body {
+    background-color: gray;
+    font-size: 25px;
+    color: white;
+}
+
+form {
+    font-size: 1em;
+    padding: 350px;
+}
+
+button {
+    background-color: violet;
+    width: 6em;
+    height: 6em;
+}
+
+#generate {
+    padding: 6em;
+}
+
+#result {
+    float: right;
+}
+
+span {
+    color: white;
+}
+
+#containscanvas {
+    padding-right: 6em;
+    padding-top: 2em;
+}
+
+canvas {
+    border: black solid .75em;
+    border-radius: .5em;
+    background-color: blueviolet;
+    float: right;
+}
+
+.red {
+    color: red;
+}
+
+.green {
+    color: green;   
+}
+
+.yellow {
+    color: yellow;
+}
+
+.blue {
+    color: blue;
+}
