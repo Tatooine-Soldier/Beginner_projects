@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Beginning</title>
+    <link rel='stylesheet' href='website_questions.css'>
+    <script src="website_questions.js" type="module"></script>
+</head>
+<body id='body'>
+    <main>
+        <section id='containscanvas'>
+            <canvas width="699" height="515">
+            </canvas>
+        </section>
+</body>
+</html>
+    
