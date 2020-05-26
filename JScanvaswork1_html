@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Beginning</title>
+    <link rel='stylesheet' href='website_questions.css'>
+    <script src="website_questions.js" type="module"></script>
+</head>
+<body id='body'>
+    <main>
+        <section id='containscanvas'>
+            <canvas width="699" height="515">
+            </canvas>
+        </section>
+        <section>
+            <p>The controls below allow to tranverse between 4 colours</p>
+            <ul>
+                <li>ENTER --> <em class="blue">Blue</em></li>
+                <li>L --> <em class="green">Green</em></li>
+                <li>Y --> <em class="yellow">Yellow</em></li>
+                <li>R --> <em class="red">Red</em></li>
+            </ul>
+        </section>
+</body>
+</html>
