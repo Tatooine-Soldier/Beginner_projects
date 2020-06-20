@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Festivals</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0, width=device-width">
+		<link rel="stylesheet" href="festivals.css">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    </head>
+
+    <body>
+        <section class="canvas_container">
+            <canvas id="chart" width="500px" height="500px" onmouseover="bigger(this)" onmouseout="smaller(this)">
+            </canvas>
+        </section>
+
+        <img src="sector1.png" title="winter" alt="winter is coming" id="chart_winter"/>
+        
+<!-- 
+        <script>
+            let canvas = document.getElementById("chart");
+            let context = canvas.getContext("2d");
+            let radius = canvas.height / 2;
+            context.translate(radius, radius);
+            radius = radius * 0.99
+            drawChart(); 
+            
+            document.addEventListener('DOMContentLoaded', seasons(), false);
+
+            function drawChart() {
+            context.beginPath();
+            context.arc(0, 0, 250, 0 , 2 * Math.PI);
+            context.fillStyle = "green";
+            context.fill();
+            context.closePath();
+
+            context.beginPath();
+            context.moveTo(0,0);
+            context.lineTo(250,0);
+            context.lineTo(-250,0);
+            context.lineTo(0,0);
+            context.lineTo(0, -250);
+            context.lineTo(0, 250);
+            context.strokeStyle = "yellow";
+            context.lineWidth = 4;
+            context.stroke(); 
+            context.closePath();
+
+            context.beginPath();
+            context.font="25px Arial";
+            context.fillStyle = "yellow";
+            context.textAlign = "center";
+            context.fillText("<a href='index.html'>Summer</a>", 100, -100);
+            context.fillText("Winter", -100, 100);
+            context.fillText("Spring", 100, 100);
+            context.fillText("Fall", -100, -100);
+
+            }
+
+            function bigger(x) {
+                // canvas.style.width = "60%";
+                canvas.style.transform = "scale(1.1,1.1)";
+            }
+
+            function smaller(x) {
+                canvas.style.transform = "scale(1.0,1.0)";
+            }
+
+            function seasons(event) {
+                let winter = document.getElementById("chart_winter");
+                context.drawImage(winter, -60, 20, 40, 40);
+            } -->
+
+            
+        <script>
+            let canvas = document.getElementById('chart');
+            let context = canvas.getContext('2d');
+
+            let cx = 250;
+            let cy = 250;
+
+            // in case you like using degrees
+            function converter(deg) {
+                return deg * Math.PI / 180
+            }
+
+            
+            //green sector
+            context.beginPath();
+            context.moveTo(cx,cy);
+            context.arc(cx,cy,360,0,converter(90));
+            context.fillStyle = "#3BC653";
+            context.lineTo(cx,cy);
+            context.closePath();
+            context.fill();
+
+            //blue sector
+            context.beginPath();
+            context.moveTo(cx,cy);
+            context.arc(cx,cy,360,converter(90),converter(180));
+            context.fillStyle = "#002854";
+            context.lineTo(cx,cy);
+            context.closePath();
+            context.fill();
+
+            //red sector
+            context.beginPath();
+            context.moveTo(cx,cy);
+            context.arc(cx,cy,360,converter(180),converter(270));
+            context.fillStyle = "#CF3F06";
+            context.lineTo(cx,cy);
+            context.closePath();
+            context.fill();
+            
+            //yellow sector
+            context.beginPath();
+            context.moveTo(cx,cy);
+            context.arc(cx,cy,360,converter(270),converter(360));
+            context.fillStyle = "#FFFF48";
+            context.lineTo(cx,cy);
+            context.closePath();
+            context.fill();
+
+            function bigger(x) {
+                // canvas.style.width = "60%";
+                canvas.style.transform = "scale(1.1,1.1)";
+            }
+
+            function smaller(x) {
+                canvas.style.transform = "scale(1.0,1.0)";
+            }
+            
+                        
+        </script>
+    </body>
+</html>
