@@ -13,7 +13,7 @@ public class MyThird {
 	  	System.out.println("Oop you are still underage");
           }else {
 		System.out.println("Great sign up here");
-          }*/
+          }
 
 
 	//Loop kind of like buzz fizz but can be stopped if 01 is entered 
@@ -33,6 +33,80 @@ public class MyThird {
 		System.out.println("Something went wrong");
 	  }
 	}
+
+	
+		int dnum = 3 > 5 ? 10 : 5;
+		System.out.println(dnum);
+		dnum = 3 == 5 ? 10 : 5;
+		System.out.println(dnum);
+		dnum = 3< 5 ? 10 : 5;
+		System.out.println(dnum);
+
+
+
+	//Grade system using switch
+	int[] dlist = {1, 2, 3, 4};	    //using a loop so i can test all cases :)
+	for (int i = 0; i < dlist.length; i ++) {
+	 System.out.println("Enter your grade below: ");
+         String myGrade = myObj.nextLine().toUpperCase();
+
+		switch (myGrade) {
+			case "A+":
+			case "A":
+				System.out.println("Excellent!");
+				break;
+			case "B": 
+				System.out.println("Good work");
+				break;
+			case "C": 
+				System.out.println("Keep going");
+				break;
+			default: 
+				System.out.println("FAIL stupid cunt");
+				break;
+		}
+	  }
+
+	//enhanced for loop technique
+	int[] myList = {20, 40, 50, 60};
+	for (int item : myList) {
+		System.out.println(item + 1);
+	}
+
+	//simple counter
+	int counter = 1;
+	while (counter < 21) {
+		System.out.println("Counter is " + counter);
+		counter = counter + 4;
+	}
+
+	//do-while loop, always executes the do part at least once
+	int counter = 10;
+	do {
+		System.out.println("Printing once");
+		counter--;
+	}while (counter>0);
+
+
+	//break segment in loop
+	for (int i = 0; i < 10; i++) {
+		System.out.println("i = " + i);
+		if (i == 2) {
+			break;
+		}
+	}*/
+
+	//continue in loop
+	for (int j = 0; j < 10; j++) {
+		System.out.println("j = " + j);
+		if (j == 2 || j == 6) {
+			continue;
+		}
+		System.out.println("Printing");
+	}
+	
+
+	
 
 
   }
