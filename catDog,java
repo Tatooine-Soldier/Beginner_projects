@@ -1,0 +1,16 @@
+public boolean catDog(String str) {
+  boolean result = false;
+  String cat = "cat";
+  String dog = "dog";
+  int catcount = 0;
+  int dogcount = 0;
+  for (int i = 0; i < str.length()-2; i++) {
+    if (str.substring(i,i+3).equals(cat)) {
+      catcount += 1;
+    } else if (str.substring(i,i+3).equals(dog)) {
+      dogcount += 1;
+    }
+  } if (catcount == dogcount) {
+    result = true;
+  } return result;
+}
