@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>background color</title>
+        <link rel=stylesheet href='testin.css'>
+
+    </head>
+    <body>
+       <section style="padding-left: 400px; padding-top: 250px;">
+        <label for="hexc">Hex Color</label>
+        <input type="text" name="hexc" id="hexc" placeholder="Place color here" />
+        <input type="submit" id="sub" onclick="dav()"/>
+       </section>
+        
+    </body>
+    <script>
+        function dav() {
+            let hex = document.getElementById('hexc');
+            let kjdj = document.querySelector("body");
+            kjdj.style.backgroundColor = hex.value;
+        }
+    </script>
+</html>
+
+<!-- type in the box what color you want to change to -->
