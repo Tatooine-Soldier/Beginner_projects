@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>background color</title>
+        <link rel=stylesheet href='testin.css'>
+
+    </head>
+    <body>
+       <section id="asking">
+            <i>Counting: </i><br>
+            <input type="text" name="hexc" id="hexc" placeholder="Enter your name" />
+            <input type="submit" id="sub" value="start" onclick="dav()"/><br>
+             <br>
+       </section>
+       <section id="smessage">
+        <span id='message'></span> 
+        <input type="button" class="cup" id="up" value="+" onclick="add()" />
+        <input type="button" class="cup" id="down" value="-" onclick="subtract()"/>
+    </section>
+    <span id="counter" style="font-size: 72px;" ></span>
+    <span id="turn" style="font-size: 24px; padding-left: 20px;" ></span>
+      
+        
+    </body>
+    <script>
+        let input = document.getElementById('hexc');
+        let message = document.getElementById('message');
+        let smessage = document.getElementById('smessage');
+        let asking = document.getElementById('asking');
+        let place = document.getElementById('counter');
+        let turn = document.getElementById('turn');
+        let counter = 0;
+        let turns = 0;
+
+        function add() {
+            place.style.visibility = 'visible';
+            place.innerHTML = counter;
+            turn.innerHTML = "Turns: " + turns;
+            counter += 1;
+            turns += 1;
+        }
+
+        function subtract() {
+            place.style.visibility = 'visible';
+            place.innerHTML = counter;
+            turn.innerHTML = "Turns: " + turns;
+            counter -= 1;
+            turns += 1;
+        }
+
+        function dav() {
+            asking.style.display = 'none';
+            message.style.display = 'block';
+            smessage.style.visibility = 'visible';
+
+            if (input.value !== "") {
+                message.innerHTML = input.value;
+            } else {
+                message.innerHTML = "Enter a your name";
+            }
+        }
+
+    </script>
+</html>
