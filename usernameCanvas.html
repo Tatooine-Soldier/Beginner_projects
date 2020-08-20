@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>background color</title>
+        <link rel=stylesheet href='testin.css'>
+
+    </head>
+    <body>
+       <section id="asking">
+            <i>1 player game only</i><br>
+            <input type="text" name="hexc" id="hexc" placeholder="Username" />
+            <input type="submit" id="sub" onclick="dav()"/><br>
+             <br>
+       </section>
+       <span id="message"></span>
+       <section id="can_sec">
+            <canvas id="canvas" height="500px" width="600px"></canvas>
+            <span id="score"></span>
+       </section>
+        
+    </body>
+    <script>
+        let square = {
+            x : Math.floor(Math.random() * 300),
+            y : Math.floor(Math.random() * 300),
+            size : 30,
+            xchange : 3,
+            ychange : 5
+        }
+
+        let coll = {
+            x : 0,
+            y : 0,
+            size : 40
+        }
+
+        let score = 0;
+
+        document.addEventListener('DOMContentLoaded', init, false);
+
+        function init() {
+            canvas = document.querySelector('canvas');
+            context = canvas.getContext('2d');
+            width = canvas.width;
+            height = canvas.height;
+            window.addEventListener('keydown', movement, false);
+        }
+
+        function draw() {
+            context.beginPath();
+            context.fillRect(square.x, square.y, square.size, square.size);
+            context.fillStyle = 'green';
+
+            if (moveLeft) {
+                square.x -= 8
+                score += 1;
+                let topo = document.getElementById('score');
+                topo.innerHTML = "Score :" + score;
+            }
+            if (moveRight) {
+                square.x += 8;
+            }
+            if (moveUp) {
+                square.y -= 8;
+            }
+            if (moveDown) {
+                square.y += 8;
+            }
+            
+        }
+
+        function movement() {
+            let keyCode = event.keyCode;
+            if (keyCode === 65) {
+                moveLeft = true;
+                moveDown = false;
+                moveRight = false;
+                moveUp = false;
+            } else if (keyCode === 68) {
+                moveRight = true;
+                moveDown = false;
+                moveLeft = false;
+                moveUp = false;
+            } else if (keyCode === 87) {
+                moveUp = true;
+                moveDown = false;
+                moveLeft = false;
+                moveRight = false;
+            } else if (keyCode === 83) {
+                moveDown = true;
+                moveLeft = false;
+                moveRight = false;
+                moveUp = false;
+            }
+        }
+
+        function dav() {
+            let hex = document.getElementById('hexc');
+            let message = document.getElementById('message');
+            if (hex.value !== "") {
+                message.innerHTML = "Player name "+"'" + hex.value + "'";
+            } else {
+                message.innerHTML = "Refresh and enter a username";
+            }
+            
+            let ask = document.getElementById('asking');
+            ask.style.display = 'none';                     //disposes of input box once submitted un
+
+            let canvas = document.getElementById('canvas');
+            canvas.style.display = 'block';
+
+            window.setInterval(draw, 33);
+        }
+    </script>
+</html>
