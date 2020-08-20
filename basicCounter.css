@@ -1,0 +1,40 @@
+body {
+    background-color: rgb(235, 217, 158);
+    color: blue;
+}
+
+#asking {
+    padding-left: 400px;
+    padding-top: 200px;
+}
+
+#can_sec {
+    display: block;
+    padding-right: 330px;
+    padding-top: 10px; 
+}
+
+#smessage {
+    visibility: hidden;
+    padding-left: 500px;
+    padding-top: 225px;
+    font-size: 36px;
+}
+
+#message {
+    border: blue solid 2px;
+    margin-right: 700px;
+    padding-left: 40px;
+    padding-right: 20px;
+}
+
+#counter {
+    visibility: hidden;
+    padding-left: 600px;
+}
+
+.cup {
+    background-color: black;
+    color: white;
+    width: 45px;
+}
